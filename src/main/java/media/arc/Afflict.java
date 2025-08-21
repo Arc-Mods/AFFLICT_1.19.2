@@ -1,6 +1,7 @@
-package dev.arc;
+package media.arc;
 
-import dev.arc.index.AfflictItems;
+import media.arc.index.AfflictBlocks;
+import media.arc.index.AfflictItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ public class Afflict implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		AfflictItems.initialize();
+		AfflictBlocks.initialize();
 
 
 		LOGGER.info("A F F L I C T .");

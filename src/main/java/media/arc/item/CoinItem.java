@@ -1,4 +1,4 @@
-package dev.arc.item;
+package media.arc.item;
 
 
 import net.minecraft.item.Item;

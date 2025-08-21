@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "dev.arc.Afflict"
+          "media.arc.Afflict"
 		],
 		"fabric-datagen": [
-			"dev.arc.AfflictDataGenerator"
+			"media.arc.AfflictDataGenerator"
 		]
 	},
 	"mixins": [

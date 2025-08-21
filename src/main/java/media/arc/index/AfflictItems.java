@@ -1,16 +1,19 @@
-package dev.arc.index;
+package media.arc.index;
 
-import dev.arc.item.CoinItem;
+import media.arc.item.CoinItem;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
+import java.security.PublicKey;
 
 public class AfflictItems {
 
     public static final Item COIN = register("coin", new CoinItem(new Item.Settings()));
     public static final Item STAR_CORE = register("star_core", new Item(new Item.Settings()));
     public static final Item BLADE = register("blade", new SwordItem(ToolMaterials.NETHERITE, 4, -2.7f, new Item.Settings()));
+    public static final Item INK = new BlockItem(AfflictBlocks.INK_BLOCK, new Item.Settings());
 
     private static Item register(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier("afflict", name), item);
@@ -23,10 +26,12 @@ public class AfflictItems {
                 stacks.add(new ItemStack(COIN));
                 stacks.add(new ItemStack(STAR_CORE));
                 stacks.add(new ItemStack(BLADE));
+                stacks.add(new ItemStack(INK));
             })
             .build();
 
     public static void initialize(){
+        Registry.register(Registry.ITEM, new Identifier("afflict", "ink"), INK);
 
     }
 }
