@@ -6,8 +6,6 @@ import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import java.security.PublicKey;
-
 public class AfflictItems {
 
     public static final Item COIN = register("coin", new CoinItem(new Item.Settings()));
